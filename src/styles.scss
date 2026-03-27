@@ -120,3 +120,22 @@ section {
     box-shadow: 0 0 15px rgba(0, 123, 255, 0.3);
   }
 }
+.navbar {
+  background: rgba(15, 23, 42, 0.8) !important; /* El azul de tu fondo pero con transparencia */
+  backdrop-filter: blur(10px); /* El efecto de cristal empañado */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.tech-icon-wrapper {
+  animation: float 3s ease-in-out infinite;
+  
+  // Hacemos que cada uno empiece en un momento distinto para que no suban todos a la vez
+  &:nth-child(even) { animation-delay: 0.5s; }
+  &:nth-child(3n) { animation-delay: 1s; }
+}
