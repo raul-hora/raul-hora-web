@@ -19,7 +19,7 @@ export class App{
 
   descargarCV() {
   if (this.captchaResuelto) {
-    window.open('/cv-raul-hora.pdf', '_blank');
+    window.open('/cv-raul.pdf', '_blank');
   }
 }
 }
