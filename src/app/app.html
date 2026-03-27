@@ -122,19 +122,21 @@
     <p class="lead mb-5 text-white-50">Descarga mi CV para conocer todos los detalles de mi formación en la UNED y DAW.</p>
     
     <div class="d-inline-block p-4 bg-tech-card rounded-4 shadow-lg border border-secondary">
-      <re-captcha 
-        (resolved)="onCaptchaResolved($event)" 
-        siteKey="6Le9jJosAAAAAMfvgwIwewgM1SmcLYT4SrNSFeh3"
-        theme="dark"> </re-captcha>
-      
-     <a 
-  class="btn btn-primary btn-lg w-100 mt-3 rounded-pill shadow" 
-  [class.disabled]="!captchaResuelto"
-  href="/cv-raul-hora.pdf" 
-  download="ALEXANDRU_RAUL_HORA_CV.pdf"
-  target="_blank">
-  <i class="bi bi-file-earmark-pdf-fill"></i> Descargar CV Oficial
-</a>
+  <re-captcha 
+    (resolved)="onCaptchaResolved($event)" 
+    siteKey="6Le9jJosAAAAAMfvgwIwewgM1SmcLYT4SrNSFeh3"
+    theme="dark">
+  </re-captcha>
+  
+    <a 
+      class="btn btn-primary btn-lg w-100 mt-3 rounded-pill shadow" 
+      [class.disabled]="!captchaResuelto"
+      href="/cv-raul.pdf" 
+      download="ALEXANDRU_RAUL_HORA_CV.pdf"
+      target="_blank">
+      <i class="bi bi-file-earmark-pdf-fill"></i> Descargar CV Oficial
+    </a>
+
     </div>
   </div>
 </section>
