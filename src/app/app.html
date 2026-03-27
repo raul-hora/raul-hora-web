@@ -4,7 +4,30 @@
     <div class="navbar-nav ms-auto">
       <a class="nav-link" href="#proyectos">Proyectos</a>
       <a class="nav-link" href="#formacion">Formación</a>
-      <a class="nav-link btn btn-outline-primary ms-lg-3 text-white" href="#">Descargar CV</a>
+     <div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card shadow-sm border-0 p-4 text-center bg-light">
+        <h4 class="mb-3 fw-bold">Descargar Currículum Vitae</h4>
+        <p class="text-muted small mb-4">Por seguridad, confirma que no eres un robot para habilitar la descarga oficial.</p>
+        
+        <div class="d-flex justify-content-center mb-3">
+          <re-captcha 
+            (resolved)="onCaptchaResolved($event)" 
+            siteKey="6Le9jJosAAAAAMfvgwIwewgM1SmcLYT4SrNSFeh3">
+          </re-captcha>
+        </div>
+
+        <button 
+          class="btn btn-primary btn-lg w-100" 
+          [disabled]="!captchaResuelto" 
+          (click)="descargarCV()">
+          <i class="bi bi-file-earmark-pdf"></i> Obtener CV (PDF)
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
     </div>
   </div>
 </nav>
@@ -32,19 +55,56 @@
       <h2 class="fw-bolder">Proyectos IT</h2>
       <p class="lead fw-normal text-muted mb-0">Selección de desarrollos en GitHub</p>
     </div>
-    <div class="row gx-5">
-      <div class="col-lg-4 mb-5">
-        <div class="card h-100 shadow border-0">
-          <div class="card-body p-4">
-            <div class="badge bg-primary bg-gradient rounded-pill mb-2">Java / SQL</div>
-            <h5 class="card-title mb-3">Nombre del Proyecto</h5>
-            <p class="card-text mb-0">Descripción técnica de lo que hiciste en este repo de tu GitHub.</p>
-          </div>
-          <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
-            <a class="btn btn-sm btn-dark" href="#">Ver Código</a>
-          </div>
-        </div>
+   <div class="row gx-5">
+  
+  <div class="col-lg-4 mb-5">
+    <div class="card h-100 shadow border-0">
+      <div class="card-body p-4">
+        <div class="badge bg-success bg-gradient rounded-pill mb-2">Java 21 / Spring Boot 3</div>
+        <h5 class="card-title mb-3 text-primary">Tak-Manager API</h5>
+        <p class="card-text mb-0 small text-muted">
+          Implementación de una API REST bajo <strong>Arquitectura Hexagonal (Ports & Adapters)</strong>. 
+          Enfoque en el desacoplamiento de la lógica de negocio y persistencia con H2.
+        </p>
+      </div>
+      <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+        <a class="btn btn-sm btn-dark" href="https://github.com/raul-hora/tak-manager">Ver Repositorio</a>
       </div>
     </div>
+  </div>
+
+  <div class="col-lg-4 mb-5">
+    <div class="card h-100 shadow border-0">
+      <div class="card-body p-4">
+        <div class="badge bg-danger bg-gradient rounded-pill mb-2">PHP / Laravel / Vue</div>
+        <h5 class="card-title mb-3 text-primary">Full-Stack Social App</h5>
+        <p class="card-text mb-0 small text-muted">
+          Réplica funcional de red social enfocada en el manejo de <strong>Relaciones Eloquent (ORM)</strong>, 
+          autenticación de usuarios y gestión de contenido multimedia.
+        </p>
+      </div>
+      <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+        <a class="btn btn-sm btn-dark" href="https://github.com/raul-hora/Instagram-Con-Laravel">Ver Repositorio</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-4 mb-5">
+    <div class="card h-100 shadow border-0">
+      <div class="card-body p-4">
+        <div class="badge bg-info bg-gradient rounded-pill mb-2">PHP / API REST</div>
+        <h5 class="card-title mb-3 text-primary">API SpinningCH</h5>
+        <p class="card-text mb-0 small text-muted">
+          Desarrollo de servicios backend para la gestión de datos en tiempo real. 
+          Estructura robusta para el intercambio de datos entre cliente y servidor.
+        </p>
+      </div>
+      <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+        <a class="btn btn-sm btn-dark" href="https://github.com/raul-hora/API-SpinningCH">Ver Repositorio</a>
+      </div>
+    </div>
+  </div>
+
+</div>
   </div>
 </section>
