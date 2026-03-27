@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import { CommonModule } from '@angular/common'; 
 import { RecaptchaModule } from 'ng-recaptcha';
 
@@ -9,23 +9,17 @@ import { RecaptchaModule } from 'ng-recaptcha';
   templateUrl: './app.html',
   styleUrls: ['./app.scss']
 })
-export class App {
-  captchaResuelto: boolean = false;
+export class App{
+  captchaResuelto = false;
 
-  // Se ejecuta cuando el usuario marca el "No soy un robot"
+
   onCaptchaResolved(token: string | null) {
-    if (token) {
-      this.captchaResuelto = true;
-    } else {
-      this.captchaResuelto = false;
-    }
+    this.captchaResuelto = !!token;
   }
 
-  // Función para descargar el archivo
   descargarCV() {
     if (this.captchaResuelto) {
-      
-      window.open('/ALEXANDRU RAUL HORA CV.pdf', '_blank');
+      window.open('/cv-raul-hora.pdf', '_blank');
     }
   }
 }

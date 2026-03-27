@@ -1,1 +1,96 @@
 /* You can add global styles to this file, and also import other style files */
+
+.card-tech-hover {
+  transition: transform 0.3s ease-in-out, shadow 0.3s ease-in-out;
+  
+  &:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 1rem 3rem rgba(0, 123, 255, 0.175) !important; 
+  }
+}
+
+$primary-tech: #007bff; // Un azul eléctrico
+$bg-dark-tech: #121212; // Un negro casi puro
+$card-bg-tech: #1e1e1e; // Un gris muy oscuro 
+
+$primary: $primary-tech;
+$body-bg: $bg-dark-tech;
+$body-color: #e0e0e0; // Texto gris claro 
+
+@import "bootstrap/scss/bootstrap";
+
+.bg-tech-dark { background-color: $bg-dark-tech !important; }
+.bg-tech-card { background-color: $card-bg-tech !important; border: 1px solid #333; }
+.text-tech-muted { color: #a0a0a0 !important; }
+
+body {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%) !important;
+  color: #f8fafc !important;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif; 
+}
+
+// Retoque para las secciones
+.bg-tech-dark {
+  background: transparent !important; 
+}
+
+// Tarjetas estilo "Glass" con borde brillante
+.bg-tech-card {
+  background: rgba(255, 255, 255, 0.03) !important;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 20px;
+}
+
+.carousel-inner {
+  padding: 20px 0;
+}
+/* Estilo Premium de las Tarjetas */
+.bg-tech-card {
+  background: rgba(30, 41, 59, 0.7) !important; /* Color pizarra oscuro traslúcido */
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  transition: all 0.3s ease;
+}
+
+.card-flyer {
+  &:hover {
+    transform: translateY(-10px); /* Sube la tarjeta */
+    background: rgba(30, 41, 59, 0.9) !important;
+    border-color: rgba(0, 123, 255, 0.5) !important; /* Borde azul brillante al tocar */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4) !important;
+  }
+}
+
+.text-tech-muted {
+  color: #94a3b8 !important; /* Gris azulado muy legible */
+}
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px); 
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); // Termina en su sitio
+  }
+}
+
+
+.animate-card {
+  opacity: 0; // Empiezan invisibles
+  animation-name: fadeInUp;
+  animation-duration: 0.8s; 
+  animation-fill-mode: forwards; 
+  animation-timing-function: ease-out; 
+}
+
+
+// Esto hace el efecto "dominó": una tarjeta detrás de otra
+.col-lg-4:nth-child(1) .animate-card { animation-delay: 0.1s; }
+.col-lg-4:nth-child(2) .animate-card { animation-delay: 0.3s; }
+.col-lg-4:nth-child(3) .animate-card { animation-delay: 0.5s; }
+.col-lg-4:nth-child(4) .animate-card { animation-delay: 0.7s; } 

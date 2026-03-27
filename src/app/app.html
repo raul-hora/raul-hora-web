@@ -1,48 +1,25 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
   <div class="container">
-    <a class="navbar-brand fw-bold" href="#">RAUL HORA <span class="text-primary">.IT</span></a>
+    <a class="navbar-brand fw-bold" href="#">RAUL HORA<span class="text-primary">.dev</span></a>
     <div class="navbar-nav ms-auto">
       <a class="nav-link" href="#proyectos">Proyectos</a>
-      <a class="nav-link" href="#formacion">Formación</a>
-     <div class="container my-5">
-  <div class="row justify-content-center">
-    <div class="col-md-6">
-      <div class="card shadow-sm border-0 p-4 text-center bg-light">
-        <h4 class="mb-3 fw-bold">Descargar Currículum Vitae</h4>
-        <p class="text-muted small mb-4">Por seguridad, confirma que no eres un robot para habilitar la descarga oficial.</p>
-        
-        <div class="d-flex justify-content-center mb-3">
-          <re-captcha 
-            (resolved)="onCaptchaResolved($event)" 
-            siteKey="6Le9jJosAAAAAMfvgwIwewgM1SmcLYT4SrNSFeh3">
-          </re-captcha>
-        </div>
-
-        <button 
-          class="btn btn-primary btn-lg w-100" 
-          [disabled]="!captchaResuelto" 
-          (click)="descargarCV()">
-          <i class="bi bi-file-earmark-pdf"></i> Obtener CV (PDF)
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
+      <a class="nav-link" href="#cv">Descargar CV</a>
     </div>
   </div>
 </nav>
 
-<header class="py-5 bg-light">
-  <div class="container px-5">
-    <div class="row gx-5 align-items-center justify-content-center">
-      <div class="col-lg-8 col-xl-7 col-xxl-6">
-        <div class="my-5 text-center text-xl-start">
-          <h1 class="display-5 fw-bolder text-dark mb-2">Ingeniero Informático & Desarrollador Full-Stack</h1>
-          <p class="lead fw-normal text-muted mb-4">Especializado en el ecosistema Java/Spring y Angular. Formado en la UNED y DAW.</p>
-          <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
-            <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#proyectos">Ver mis repositorios</a>
-            <a class="btn btn-outline-dark btn-lg px-4" href="https://github.com/raul-hora">GitHub</a>
-          </div>
+<header class="py-5 bg-tech-dark text-white border-bottom border-secondary position-relative overflow-hidden">
+  <div class="container px-5 my-5">
+    <div class="row gx-5 align-items-center justify-content-center text-center text-xl-start">
+      <div class="col-lg-8">
+        <h1 class="display-3 fw-bolder text-white mb-2" style="text-shadow: 0 0 20px rgba(0,123,255,0.2)">
+  Raúl Hora
+</h1>
+        <p class="lead fw-normal text-primary mb-4">Ingeniero Informático & Full-Stack Developer</p>
+        <p class="text-tech-muted mb-5 lead small">Estudiante Ing. Informatica UNED | Técnico Superior DAW</p>
+        <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+          <a class="btn btn-primary btn-lg px-5 rounded-pill shadow" href="#proyectos">Ver Proyectos</a>
+          <a class="btn btn-outline-light btn-lg px-5 rounded-pill" href="https://github.com/raul-hora">GitHub</a>
         </div>
       </div>
     </div>
@@ -52,59 +29,110 @@
 <section id="proyectos" class="py-5">
   <div class="container px-5 my-5">
     <div class="text-center mb-5">
-      <h2 class="fw-bolder">Proyectos IT</h2>
-      <p class="lead fw-normal text-muted mb-0">Selección de desarrollos en GitHub</p>
+      <h2 class="fw-bolder display-5 text-white">Proyectos Destacados</h2>
+      <div class="bg-primary mx-auto mb-3" style="height: 4px; width: 60px; border-radius: 2px;"></div>
+      <p class="lead text-tech-muted">Arquitectura de software y desarrollo Full-Stack</p>
     </div>
-   <div class="row gx-5">
-  
-  <div class="col-lg-4 mb-5">
-    <div class="card h-100 shadow border-0">
-      <div class="card-body p-4">
-        <div class="badge bg-success bg-gradient rounded-pill mb-2">Java 21 / Spring Boot 3</div>
-        <h5 class="card-title mb-3 text-primary">Tak-Manager API</h5>
-        <p class="card-text mb-0 small text-muted">
-          Implementación de una API REST bajo <strong>Arquitectura Hexagonal (Ports & Adapters)</strong>. 
-          Enfoque en el desacoplamiento de la lógica de negocio y persistencia con H2.
-        </p>
+
+    <div class="row gx-5 justify-content-center">
+      
+      <div class="col-lg-4 col-md-6 mb-5">
+        <div class="card h-100 bg-tech-card shadow-lg border-0 card-flyer animate-card">
+          <div class="card-body p-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="badge bg-success bg-opacity-75 rounded-pill px-3">Java 21</span>
+              <i class="bi bi-github text-white fs-4"></i>
+            </div>
+            <h4 class="card-title text-white fw-bold">Tak-Manager API</h4>
+            <p class="card-text text-tech-muted small">
+              API REST diseñada con <strong>Arquitectura Hexagonal</strong>. Implementación de dominios desacoplados y persistencia en memoria con H2.
+            </p>
+          </div>
+          <div class="card-footer p-4 pt-0 bg-transparent border-0">
+            <a class="btn btn-outline-primary btn-sm w-100 rounded-pill fw-bold" href="https://github.com/raul-hora/tak-manager">Explorar Código</a>
+          </div>
+        </div>
       </div>
-      <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
-        <a class="btn btn-sm btn-dark" href="https://github.com/raul-hora/tak-manager">Ver Repositorio</a>
+
+      <div class="col-lg-4 col-md-6 mb-5">
+        <div class="card h-100 bg-tech-card shadow-lg border-0 card-flyer animate-card">
+          <div class="card-body p-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="badge bg-danger bg-opacity-75 rounded-pill px-3">Laravel</span>
+              <i class="bi bi-instagram text-white fs-4"></i>
+            </div>
+            <h4 class="card-title text-white fw-bold">Red Social</h4>
+            <p class="card-text text-tech-muted small">
+              Plataforma Full-Stack que gestiona <strong>relaciones Eloquent Complejas</strong>, sistemas de autenticación y optimización de carga de imágenes.
+            </p>
+          </div>
+          <div class="card-footer p-4 pt-0 bg-transparent border-0">
+            <a class="btn btn-outline-primary btn-sm w-100 rounded-pill fw-bold" href="https://github.com/raul-hora/Instagram-Con-Laravel">Explorar Código</a>
+          </div>
+        </div>
       </div>
+
+      <div class="col-lg-4 col-md-6 mb-5">
+        <div class="card h-100 bg-tech-card shadow-lg border-0 card-flyer animate-card">
+          <div class="card-body p-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="badge bg-info text-dark rounded-pill px-3">PHP API</span>
+              <i class="bi bi-cpu-fill text-white fs-4"></i>
+            </div>
+            <h4 class="card-title text-white fw-bold">API SpinningCH</h4>
+            <p class="card-text text-tech-muted small">
+              Servicios backend optimizados para el intercambio de datos JSON en alta disponibilidad. Foco en seguridad y eficiencia de rutas.
+            </p>
+          </div>
+          <div class="card-footer p-4 pt-0 bg-transparent border-0">
+            <a class="btn btn-outline-primary btn-sm w-100 rounded-pill fw-bold" href="https://github.com/raul-hora/API-SpinningCH">Explorar Código</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-5">
+        <div class="card h-100 bg-tech-card shadow-lg border-0 card-flyer animate-card">
+          <div class="card-body p-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="badge bg-primary bg-opacity-75 rounded-pill px-3">Angular 21</span>
+              <i class="bi bi-angular text-white fs-4"></i>
+            </div>
+            <h4 class="card-title text-white fw-bold">Portafolio Web</h4>
+            <p class="card-text text-tech-muted small">
+              Plataforma <strong>SPA</strong> desarrollada con las últimas prestaciones de Angular. Optimizada para rendimiento y despliegue continuo en la nube.
+            </p>
+            <ul class="list-unstyled small text-primary mb-0 mt-2">
+              <li><i class="bi bi-shield-lock me-2"></i>Seguridad con reCAPTCHA</li>
+              <li><i class="bi bi-rocket-takeoff me-2"></i>CI/CD con Vercel</li>
+            </ul>
+          </div>
+          <div class="card-footer p-4 pt-0 bg-transparent border-0">
+            <a class="btn btn-outline-primary btn-sm w-100 rounded-pill fw-bold" href="https://github.com/raul-hora/raul-hora-web">Ver Código Angular</a>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
+</section>
 
-  <div class="col-lg-4 mb-5">
-    <div class="card h-100 shadow border-0">
-      <div class="card-body p-4">
-        <div class="badge bg-danger bg-gradient rounded-pill mb-2">PHP / Laravel / Vue</div>
-        <h5 class="card-title mb-3 text-primary">Full-Stack Social App</h5>
-        <p class="card-text mb-0 small text-muted">
-          Réplica funcional de red social enfocada en el manejo de <strong>Relaciones Eloquent (ORM)</strong>, 
-          autenticación de usuarios y gestión de contenido multimedia.
-        </p>
-      </div>
-      <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
-        <a class="btn btn-sm btn-dark" href="https://github.com/raul-hora/Instagram-Con-Laravel">Ver Repositorio</a>
-      </div>
+<section class="py-5 bg-dark text-white border-top border-secondary" id="cv">
+  <div class="container text-center py-5">
+    <h2 class="fw-bolder mb-4">¿Hablamos?</h2>
+    <p class="lead mb-5 text-white-50">Descarga mi CV para conocer todos los detalles de mi formación en la UNED y DAW.</p>
+    
+    <div class="d-inline-block p-4 bg-tech-card rounded-4 shadow-lg border border-secondary">
+      <re-captcha 
+        (resolved)="onCaptchaResolved($event)" 
+        siteKey="6Le9jJosAAAAAMfvgwIwewgM1SmcLYT4SrNSFeh3"
+        theme="dark"> </re-captcha>
+      
+      <button 
+        class="btn btn-primary btn-lg w-100 mt-3 rounded-pill shadow" 
+        [disabled]="!captchaResuelto" 
+        (click)="descargarCV()">
+        <i class="bi bi-file-earmark-pdf-fill"></i> Descargar CV Oficial
+      </button>
     </div>
-  </div>
-
-  <div class="col-lg-4 mb-5">
-    <div class="card h-100 shadow border-0">
-      <div class="card-body p-4">
-        <div class="badge bg-info bg-gradient rounded-pill mb-2">PHP / API REST</div>
-        <h5 class="card-title mb-3 text-primary">API SpinningCH</h5>
-        <p class="card-text mb-0 small text-muted">
-          Desarrollo de servicios backend para la gestión de datos en tiempo real. 
-          Estructura robusta para el intercambio de datos entre cliente y servidor.
-        </p>
-      </div>
-      <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
-        <a class="btn btn-sm btn-dark" href="https://github.com/raul-hora/API-SpinningCH">Ver Repositorio</a>
-      </div>
-    </div>
-  </div>
-
-</div>
   </div>
 </section>
